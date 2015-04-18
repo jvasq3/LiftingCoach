@@ -6,17 +6,24 @@
 //  Copyright (c) 2015 CS378. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainScreenViewController.h"
 
-@interface ViewController ()
+@interface MainScreenViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MainScreenViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(IBAction)reset:(UIStoryboardSegue *)segue {
+    //do stuff
+}
+
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
 }
 
 - (void)didReceiveMemoryWarning {
