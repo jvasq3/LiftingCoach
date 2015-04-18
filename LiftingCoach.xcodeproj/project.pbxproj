@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27250B421AE2050200846E06 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B411AE2050200846E06 /* User.m */; };
+		27250B461AE2094A00846E06 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B451AE2094A00846E06 /* Workout.m */; };
+		27250B521AE2238000846E06 /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B511AE2238000846E06 /* Exercise.m */; };
+		27250B551AE229D200846E06 /* WorkoutProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B541AE229D200846E06 /* WorkoutProgram.m */; };
+		27250B581AE22F6E00846E06 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B571AE22F6E00846E06 /* Set.m */; };
 		3C092AEF1AE1B957004A4324 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AEE1AE1B957004A4324 /* main.m */; };
 		3C092AF21AE1B958004A4324 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AF11AE1B958004A4324 /* AppDelegate.m */; };
 		3C092AF51AE1B958004A4324 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AF41AE1B958004A4324 /* MainScreenViewController.m */; };
@@ -27,6 +32,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27250B401AE2050200846E06 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		27250B411AE2050200846E06 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		27250B441AE2094A00846E06 /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
+		27250B451AE2094A00846E06 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
+		27250B501AE2238000846E06 /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
+		27250B511AE2238000846E06 /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
+		27250B531AE229D200846E06 /* WorkoutProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutProgram.h; sourceTree = "<group>"; };
+		27250B541AE229D200846E06 /* WorkoutProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutProgram.m; sourceTree = "<group>"; };
+		27250B561AE22F6E00846E06 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Set.h; sourceTree = "<group>"; };
+		27250B571AE22F6E00846E06 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Set.m; sourceTree = "<group>"; };
 		3C092AE91AE1B957004A4324 /* LiftingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C092AED1AE1B957004A4324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C092AEE1AE1B957004A4324 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +75,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27250B431AE2051F00846E06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27250B501AE2238000846E06 /* Exercise.h */,
+				27250B511AE2238000846E06 /* Exercise.m */,
+				27250B401AE2050200846E06 /* User.h */,
+				27250B411AE2050200846E06 /* User.m */,
+				27250B561AE22F6E00846E06 /* Set.h */,
+				27250B571AE22F6E00846E06 /* Set.m */,
+				27250B531AE229D200846E06 /* WorkoutProgram.h */,
+				27250B541AE229D200846E06 /* WorkoutProgram.m */,
+				27250B441AE2094A00846E06 /* Workout.h */,
+				27250B451AE2094A00846E06 /* Workout.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		3C092AE01AE1B957004A4324 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +121,7 @@
 				3C092AF91AE1B958004A4324 /* Images.xcassets */,
 				3C092AFB1AE1B958004A4324 /* LaunchScreen.xib */,
 				3C092AEC1AE1B957004A4324 /* Supporting Files */,
+				27250B431AE2051F00846E06 /* Model */,
 			);
 			path = LiftingCoach;
 			sourceTree = "<group>";
@@ -219,8 +252,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27250B421AE2050200846E06 /* User.m in Sources */,
+				27250B551AE229D200846E06 /* WorkoutProgram.m in Sources */,
 				3C092AF51AE1B958004A4324 /* MainScreenViewController.m in Sources */,
+				27250B461AE2094A00846E06 /* Workout.m in Sources */,
+				27250B581AE22F6E00846E06 /* Set.m in Sources */,
 				3C092AF21AE1B958004A4324 /* AppDelegate.m in Sources */,
+				27250B521AE2238000846E06 /* Exercise.m in Sources */,
 				3C092AEF1AE1B957004A4324 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

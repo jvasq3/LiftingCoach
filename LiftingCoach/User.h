@@ -12,10 +12,12 @@
 @interface User : NSObject
 
 @property (strong, nonatomic) NSString *username;
-@property (nonatomic, readonly) NSInteger maxSquat;
-@property (nonatomic, readonly) NSInteger maxBench;
-@property (nonatomic, readonly) NSInteger maxDeadlift;
-@property (nonatomic, readonly) NSInteger maxOverhead;
-@property (strong, nonatomic) Workout *currentWorkout;
+@property (nonatomic, readwrite) NSInteger maxSquat;
+@property (nonatomic, readwrite) NSInteger maxBench;
+@property (nonatomic, readwrite) NSInteger maxDeadlift;
+@property (nonatomic, readwrite) NSInteger maxOverhead;
+
+
+
 
 @end

@@ -10,9 +10,8 @@
 
 @interface Workout : NSObject
 
-@property (nonatomic, strong) NSMutableArray *benchReps;
-@property (nonatomic, strong) NSMutableArray *squatReps;
-@property (nonatomic, strong) NSMutableArray *deadliftReps;
-@property (nonatomic, strong) NSMutableArray *overheadReps;
+// an array of the objects Exercise
+@property (strong, nonatomic) NSMutableArray *exercises;
+
 
 @end
