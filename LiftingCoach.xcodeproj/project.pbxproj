@@ -14,6 +14,7 @@
 		3C092AFA1AE1B958004A4324 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C092AF91AE1B958004A4324 /* Images.xcassets */; };
 		3C092AFD1AE1B958004A4324 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C092AFB1AE1B958004A4324 /* LaunchScreen.xib */; };
 		3C092B091AE1B958004A4324 /* LiftingCoachTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B081AE1B958004A4324 /* LiftingCoachTests.m */; };
+		3C092B1A1AE1DD9D004A4324 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B191AE1DD9D004A4324 /* TimerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		3C092B021AE1B958004A4324 /* LiftingCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiftingCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C092B071AE1B958004A4324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C092B081AE1B958004A4324 /* LiftingCoachTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftingCoachTests.m; sourceTree = "<group>"; };
+		3C092B181AE1DD8B004A4324 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		3C092B191AE1DD9D004A4324 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				3C092AF11AE1B958004A4324 /* AppDelegate.m */,
 				3C092AF31AE1B958004A4324 /* MainScreenViewController.h */,
 				3C092AF41AE1B958004A4324 /* MainScreenViewController.m */,
+				3C092B181AE1DD8B004A4324 /* TimerViewController.h */,
+				3C092B191AE1DD9D004A4324 /* TimerViewController.m */,
 				3C092AF61AE1B958004A4324 /* Main.storyboard */,
 				3C092AF91AE1B958004A4324 /* Images.xcassets */,
 				3C092AFB1AE1B958004A4324 /* LaunchScreen.xib */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C092B1A1AE1DD9D004A4324 /* TimerViewController.m in Sources */,
 				3C092AF51AE1B958004A4324 /* MainScreenViewController.m in Sources */,
 				3C092AF21AE1B958004A4324 /* AppDelegate.m in Sources */,
 				3C092AEF1AE1B957004A4324 /* main.m in Sources */,
