@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27250B421AE2050200846E06 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B411AE2050200846E06 /* User.m */; };
 		27250B461AE2094A00846E06 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B451AE2094A00846E06 /* Workout.m */; };
 		27250B521AE2238000846E06 /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B511AE2238000846E06 /* Exercise.m */; };
-		27250B551AE229D200846E06 /* WorkoutProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B541AE229D200846E06 /* WorkoutProgram.m */; };
 		27250B581AE22F6E00846E06 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B571AE22F6E00846E06 /* Set.m */; };
+		2796562D1AE5DF01008348FC /* CurrentWorkoutProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 2796562C1AE5DF01008348FC /* CurrentWorkoutProgram.m */; };
+		279656301AE5DF35008348FC /* CurrentWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2796562F1AE5DF35008348FC /* CurrentWorkout.m */; };
+		279656311AE5E61D008348FC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B411AE2050200846E06 /* User.m */; };
+		279656321AE5E623008348FC /* WorkoutProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B541AE229D200846E06 /* WorkoutProgram.m */; };
 		3C092AEF1AE1B957004A4324 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AEE1AE1B957004A4324 /* main.m */; };
 		3C092AF21AE1B958004A4324 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AF11AE1B958004A4324 /* AppDelegate.m */; };
 		3C092AF51AE1B958004A4324 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AF41AE1B958004A4324 /* MainScreenViewController.m */; };
@@ -43,6 +45,10 @@
 		27250B541AE229D200846E06 /* WorkoutProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutProgram.m; sourceTree = "<group>"; };
 		27250B561AE22F6E00846E06 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Set.h; sourceTree = "<group>"; };
 		27250B571AE22F6E00846E06 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Set.m; sourceTree = "<group>"; };
+		2796562B1AE5DF01008348FC /* CurrentWorkoutProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentWorkoutProgram.h; sourceTree = "<group>"; };
+		2796562C1AE5DF01008348FC /* CurrentWorkoutProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentWorkoutProgram.m; sourceTree = "<group>"; };
+		2796562E1AE5DF35008348FC /* CurrentWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentWorkout.h; sourceTree = "<group>"; };
+		2796562F1AE5DF35008348FC /* CurrentWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentWorkout.m; sourceTree = "<group>"; };
 		3C092AE91AE1B957004A4324 /* LiftingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C092AED1AE1B957004A4324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C092AEE1AE1B957004A4324 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -119,6 +125,10 @@
 				3C092AF01AE1B957004A4324 /* AppDelegate.h */,
 				3C092AF11AE1B958004A4324 /* AppDelegate.m */,
 				3C092AF31AE1B958004A4324 /* MainScreenViewController.h */,
+				2796562B1AE5DF01008348FC /* CurrentWorkoutProgram.h */,
+				2796562C1AE5DF01008348FC /* CurrentWorkoutProgram.m */,
+				2796562E1AE5DF35008348FC /* CurrentWorkout.h */,
+				2796562F1AE5DF35008348FC /* CurrentWorkout.m */,
 				3C092AF41AE1B958004A4324 /* MainScreenViewController.m */,
 				3C092B181AE1DD8B004A4324 /* TimerViewController.h */,
 				3C092B191AE1DD9D004A4324 /* TimerViewController.m */,
@@ -257,6 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279656321AE5E623008348FC /* WorkoutProgram.m in Sources */,
+				279656311AE5E61D008348FC /* User.m in Sources */,
+				2796562D1AE5DF01008348FC /* CurrentWorkoutProgram.m in Sources */,
 				3C092B1A1AE1DD9D004A4324 /* TimerViewController.m in Sources */,
 				3C092AF51AE1B958004A4324 /* MainScreenViewController.m in Sources */,
 				27250B461AE2094A00846E06 /* Workout.m in Sources */,
@@ -264,6 +277,7 @@
 				3C092AF21AE1B958004A4324 /* AppDelegate.m in Sources */,
 				27250B521AE2238000846E06 /* Exercise.m in Sources */,
 				3C092AEF1AE1B957004A4324 /* main.m in Sources */,
+				279656301AE5DF35008348FC /* CurrentWorkout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,4 @@
 
 @implementation WorkoutProgram
 
-
-
 @end

@@ -10,6 +10,8 @@
 
 @interface WorkoutProgram : NSObject
 
+@property (nonatomic, strong) NSString *programName;
+
 // array of workouts
 @property (nonatomic, strong) NSMutableArray *workouts;
 
