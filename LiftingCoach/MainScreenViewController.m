@@ -8,21 +8,16 @@
 
 #import "MainScreenViewController.h"
 #import "WorkoutProgram.h"
+#import "Exercise.h"
+#import "WorkoutProgramViewController.h"
+
 @interface MainScreenViewController ()
 
 @property (strong, nonatomic) WorkoutProgram *workoutProgram;
-@property (strong, nonatomic) NSString *programName;
 
 @end
 
 @implementation MainScreenViewController
-
-- (NSString *)programName {
-    if (!_workoutProgram) {
-        _programName = [[NSString alloc]init];
-    }
-    return _programName;
-}
 
 - (WorkoutProgram *)workoutProgram
 {
@@ -36,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
 }
 
 -(IBAction)reset:(UIStoryboardSegue *)segue {
@@ -50,27 +46,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)strongLiftsSelected:(id)sender {
-    self.programName = @"StrongLifts";
-    self.workoutProgram = [[WorkoutProgram alloc]init];
-    self.workoutProgram.programName = self.programName;
-    NSLog(@"Program Name: %@", self.workoutProgram.programName);
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Set the workout program appropriately on the segued page
+    if ([[segue identifier] isEqualToString:@"StrongLifts"])
+    {
+        self.workoutProgram = [[WorkoutProgram alloc]initWithName:strongLifts];
+        
+    }
+    else if ([[segue identifier] isEqualToString:@"Madcow"]) {
+        self.workoutProgram = [[WorkoutProgram alloc]initWithName:madCow];
+    }
+    else if ([[segue identifier] isEqualToString:@"Wendlers"]) {
+        self.workoutProgram = [[WorkoutProgram alloc]initWithName:wendlers];
+    }
+    // Get reference to the destination view controller
+    WorkoutProgramViewController *vc = (WorkoutProgramViewController *)segue.destinationViewController;
+    
+    vc.workoutProgram = self.workoutProgram;
 }
 
-- (IBAction)windlersSelected:(id)sender {
-    self.programName = @"Windler's";
-    self.workoutProgram = [[WorkoutProgram alloc]init];
-    self.workoutProgram.programName = self.programName;
-    NSLog(@"Program Name: %@", self.workoutProgram.programName);
-}
 
-
-- (IBAction)germanVolumeSelected:(id)sender {
-    self.programName = @"GermanVolume";
-    self.workoutProgram = [[WorkoutProgram alloc]init];
-    self.workoutProgram.programName = self.programName;
-    NSLog(@"Program Name: %@", self.workoutProgram.programName);
-}
 
 
 
