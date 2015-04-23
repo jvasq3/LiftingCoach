@@ -36,7 +36,7 @@
 
 @end
 
-static NSString *dayA = @"A";
-static NSString *dayB = @"B";
-static NSString *dayC = @"C";
-static NSString *dayD = @"D";
+static NSString *dayA = @" A";
+static NSString *dayB = @" B";
+static NSString *dayC = @" C";
+static NSString *dayD = @" D";

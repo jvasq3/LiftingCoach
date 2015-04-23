@@ -9,7 +9,9 @@
  
  #import "WorkoutProgramViewController.h"
  #import "MainScreenViewController.h"
- #import  "Workout.h"
+ #import "Workout.h"
+ #import "Exercise.h"
+ #import "WorkoutViewController.h"
  @implementation WorkoutProgramViewController
  
  - (WorkoutProgram *)workoutProgram
@@ -19,6 +21,14 @@
  }
  return _workoutProgram;
  }
+
+- (Workout *)workout
+{
+    if (!_workout) {
+        _workout = [[Workout alloc] init];
+    }
+    return _workout;
+}
  
  - (void)viewDidLoad {
  
@@ -44,46 +54,61 @@
  if (cell == nil) {
  cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"WorkoutList"];
  }
+     Workout *workout = [self.workoutProgram.workouts objectAtIndex:indexPath.row];
      
-     if(indexPath.row == 0)
-     {
-         cell.textLabel.text = [self.workoutProgram.programName stringByAppendingString:@" A"];
-         cell.detailTextLabel.text = @"";
-         cell.detailTextLabel.textAlignment = NSTextAlignmentCenter;
-     }
-     else if(indexPath.row == 1)
-     {
-         cell.textLabel.text = [self.workoutProgram.programName stringByAppendingString:@" B"];
-     }
-     else if(indexPath.row == 2)
-     {
-         cell.textLabel.text = [self.workoutProgram.programName stringByAppendingString:@" C"];
-     }
-     else if(indexPath.row == 3)
-     {
-         cell.textLabel.text = [self.workoutProgram.programName stringByAppendingString:@" D"];
-     }
+     NSString *exerciseNames = [[NSString alloc]init];
      
-     cell.textLabel.textAlignment = NSTextAlignmentCenter;
+     cell.textLabel.text = [self.workoutProgram.programName stringByAppendingString:workout.day];
+     
+     NSMutableArray *containsNames = [[NSMutableArray alloc]init];
+     
+     for (int i = 0; i < workout.exercises.count; i++) {
+         Exercise *exercise = [workout.exercises objectAtIndex:i];
+         //[exerciseNames appendString:exercise.name];
+         [containsNames addObject:exercise.name];
+     }
+     NSArray *namesCopy = [containsNames copy];
+     
+     exerciseNames = [namesCopy componentsJoinedByString:@", "];
+     cell.detailTextLabel.text = exerciseNames;
+     
  return cell;
  
  }
 
-
+/*
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+     
+     // make self.workout in here based on selection
+     self.workout = [self.workoutProgram.workouts objectAtIndex:indexPath.row];
+     
+     [self performSegueWithIdentifier:@"ToExerciseList"
+                               sender:self];
  }
+ */
+
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"StrongLiftsA"])
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    self.workout = [self.workoutProgram.workouts objectAtIndex:indexPath.row];
+    
+    if([segue.identifier isEqualToString:@"ToExerciseList"])
     {
-        //if ([segue.destinationViewController isKindOfClass:[SettingsViewController class]]) {
-          //  SettingsViewController *settingsVC = (SettingsViewController *)segue.destinationViewController;
-            //settingsVC.user = self.user;
-        //}
+        if ([segue.destinationViewController isKindOfClass:[WorkoutViewController class]]) {
+            WorkoutViewController *vc = (WorkoutViewController *)segue.destinationViewController;
+            vc.workout = self.workout;
+            
+        }
     }
+ 
+ 
+    
+    
 }
+ 
 
 
 @end
