@@ -10,10 +10,13 @@
 #import "WorkoutProgram.h"
 #import "Exercise.h"
 #import "WorkoutProgramViewController.h"
+#import "User.h"
+#import "SettingsViewController.h"
 
 @interface MainScreenViewController ()
 
 @property (strong, nonatomic) WorkoutProgram *workoutProgram;
+@property (nonatomic, strong) User *user;
 
 @end
 
@@ -27,6 +30,14 @@
     return _workoutProgram;
 }
 
+-(User*) user
+{
+    if(!_user)
+    {
+        _user = [[User alloc] init];
+    }
+    return _user;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,26 +60,38 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if([segue.identifier isEqualToString:@"settings"])
+    {
+        if ([segue.destinationViewController isKindOfClass:[SettingsViewController class]]) {
+            SettingsViewController *settingsVC = (SettingsViewController *)segue.destinationViewController;
+            settingsVC.user = self.user;
+        }
+    }
+    
     // Set the workout program appropriately on the segued page
     if ([[segue identifier] isEqualToString:@"StrongLifts"])
     {
         self.workoutProgram = [[WorkoutProgram alloc]initWithName:strongLifts];
+        // Get reference to the destination view controller
+        WorkoutProgramViewController *vc = (WorkoutProgramViewController *)segue.destinationViewController;
         
+        vc.workoutProgram = self.workoutProgram;
     }
     else if ([[segue identifier] isEqualToString:@"Madcow"]) {
         self.workoutProgram = [[WorkoutProgram alloc]initWithName:madCow];
+        // Get reference to the destination view controller
+        WorkoutProgramViewController *vc = (WorkoutProgramViewController *)segue.destinationViewController;
+        
+        vc.workoutProgram = self.workoutProgram;
     }
     else if ([[segue identifier] isEqualToString:@"Wendlers"]) {
         self.workoutProgram = [[WorkoutProgram alloc]initWithName:wendlers];
+        // Get reference to the destination view controller
+        WorkoutProgramViewController *vc = (WorkoutProgramViewController *)segue.destinationViewController;
+        
+        vc.workoutProgram = self.workoutProgram;
     }
-    // Get reference to the destination view controller
-    WorkoutProgramViewController *vc = (WorkoutProgramViewController *)segue.destinationViewController;
     
-    vc.workoutProgram = self.workoutProgram;
 }
-
-
-
-
 
 @end

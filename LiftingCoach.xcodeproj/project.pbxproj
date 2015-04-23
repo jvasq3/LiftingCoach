@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2723BF951AE8679900A44499 /* WorkoutProgramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2723BF941AE8679900A44499 /* WorkoutProgramViewController.m */; };
 		27250B461AE2094A00846E06 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B451AE2094A00846E06 /* Workout.m */; };
 		27250B521AE2238000846E06 /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B511AE2238000846E06 /* Exercise.m */; };
 		27250B581AE22F6E00846E06 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B571AE22F6E00846E06 /* Set.m */; };
+		2750EB331AE874A500BDCB90 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2750EB311AE874A500BDCB90 /* SettingsViewController.m */; };
 		279656311AE5E61D008348FC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B411AE2050200846E06 /* User.m */; };
 		279656321AE5E623008348FC /* WorkoutProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B541AE229D200846E06 /* WorkoutProgram.m */; };
-		279BB4471AE70F500025FA55 /* WorkoutProgramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279BB4461AE70F500025FA55 /* WorkoutProgramViewController.m */; };
 		279BB44A1AE70F880025FA55 /* WorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 279BB4491AE70F880025FA55 /* WorkoutViewController.m */; };
 		3C092AEF1AE1B957004A4324 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AEE1AE1B957004A4324 /* main.m */; };
 		3C092AF21AE1B958004A4324 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AF11AE1B958004A4324 /* AppDelegate.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2723BF931AE8679900A44499 /* WorkoutProgramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutProgramViewController.h; sourceTree = "<group>"; };
+		2723BF941AE8679900A44499 /* WorkoutProgramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutProgramViewController.m; sourceTree = "<group>"; };
 		27250B401AE2050200846E06 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		27250B411AE2050200846E06 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		27250B441AE2094A00846E06 /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
@@ -45,8 +48,8 @@
 		27250B541AE229D200846E06 /* WorkoutProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutProgram.m; sourceTree = "<group>"; };
 		27250B561AE22F6E00846E06 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Set.h; sourceTree = "<group>"; };
 		27250B571AE22F6E00846E06 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Set.m; sourceTree = "<group>"; };
-		279BB4451AE70F500025FA55 /* WorkoutProgramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutProgramViewController.h; sourceTree = "<group>"; };
-		279BB4461AE70F500025FA55 /* WorkoutProgramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutProgramViewController.m; sourceTree = "<group>"; };
+		2750EB311AE874A500BDCB90 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2750EB321AE874A500BDCB90 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		279BB4481AE70F880025FA55 /* WorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutViewController.h; sourceTree = "<group>"; };
 		279BB4491AE70F880025FA55 /* WorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutViewController.m; sourceTree = "<group>"; };
 		3C092AE91AE1B957004A4324 /* LiftingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +125,8 @@
 		3C092AEB1AE1B957004A4324 /* LiftingCoach */ = {
 			isa = PBXGroup;
 			children = (
+				2750EB311AE874A500BDCB90 /* SettingsViewController.m */,
+				2750EB321AE874A500BDCB90 /* SettingsViewController.h */,
 				3C092AF01AE1B957004A4324 /* AppDelegate.h */,
 				3C092AF11AE1B958004A4324 /* AppDelegate.m */,
 				3C092AF31AE1B958004A4324 /* MainScreenViewController.h */,
@@ -130,8 +135,8 @@
 				3C092B191AE1DD9D004A4324 /* TimerViewController.m */,
 				279BB4481AE70F880025FA55 /* WorkoutViewController.h */,
 				279BB4491AE70F880025FA55 /* WorkoutViewController.m */,
-				279BB4451AE70F500025FA55 /* WorkoutProgramViewController.h */,
-				279BB4461AE70F500025FA55 /* WorkoutProgramViewController.m */,
+				2723BF931AE8679900A44499 /* WorkoutProgramViewController.h */,
+				2723BF941AE8679900A44499 /* WorkoutProgramViewController.m */,
 				3C092AF61AE1B958004A4324 /* Main.storyboard */,
 				3C092AF91AE1B958004A4324 /* Images.xcassets */,
 				3C092AFB1AE1B958004A4324 /* LaunchScreen.xib */,
@@ -268,8 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				279656321AE5E623008348FC /* WorkoutProgram.m in Sources */,
-				279BB4471AE70F500025FA55 /* WorkoutProgramViewController.m in Sources */,
+				2723BF951AE8679900A44499 /* WorkoutProgramViewController.m in Sources */,
 				279BB44A1AE70F880025FA55 /* WorkoutViewController.m in Sources */,
+				2750EB331AE874A500BDCB90 /* SettingsViewController.m in Sources */,
 				279656311AE5E61D008348FC /* User.m in Sources */,
 				3C092B1A1AE1DD9D004A4324 /* TimerViewController.m in Sources */,
 				3C092AF51AE1B958004A4324 /* MainScreenViewController.m in Sources */,
