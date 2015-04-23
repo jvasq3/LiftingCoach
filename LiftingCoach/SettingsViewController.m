@@ -35,6 +35,7 @@
     _benchMax.delegate = self;
     _deadliftMax.delegate = self;
     _oPressMax.delegate = self;
+    
     self.squatMax.keyboardType = UIKeyboardTypeNumberPad;
     self.benchMax.keyboardType = UIKeyboardTypeNumberPad;
     self.deadliftMax.keyboardType = UIKeyboardTypeNumberPad;
@@ -48,15 +49,15 @@
     {
         self.benchMax.text = [NSString stringWithFormat: @"%ld", self.user.maxBench];
     }
-    else if(self.user.maxDeadlift)
+    if (self.user.maxDeadlift)
     {
         self.deadliftMax.text = [NSString stringWithFormat: @"%ld", self.user.maxDeadlift];
     }
-    else if(self.user.maxOverhead)
+    if (self.user.maxOverhead)
     {
         self.oPressMax.text = [NSString stringWithFormat: @"%ld", self.user.maxOverhead];
     }
-    else if (self.user.maxSquat)
+    if (self.user.maxSquat)
     {
         self.squatMax.text = [NSString stringWithFormat: @"%ld", self.user.maxSquat];
     }
