@@ -17,7 +17,4 @@
 @property (nonatomic, readwrite) NSInteger maxDeadlift;
 @property (nonatomic, readwrite) NSInteger maxOverhead;
 
-
-
-
 @end
