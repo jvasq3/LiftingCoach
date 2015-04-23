@@ -37,6 +37,7 @@
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
  {
+     
  
  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WorkoutList"];
  
@@ -44,34 +45,45 @@
  cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"WorkoutList"];
  }
      
- 
+     if(indexPath.row == 0)
+     {
+         cell.textLabel.text = [self.workoutProgram.programName stringByAppendingString:@" A"];
+         cell.detailTextLabel.text = @"";
+         cell.detailTextLabel.textAlignment = NSTextAlignmentCenter;
+     }
+     else if(indexPath.row == 1)
+     {
+         cell.textLabel.text = [self.workoutProgram.programName stringByAppendingString:@" B"];
+     }
+     else if(indexPath.row == 2)
+     {
+         cell.textLabel.text = [self.workoutProgram.programName stringByAppendingString:@" C"];
+     }
+     else if(indexPath.row == 3)
+     {
+         cell.textLabel.text = [self.workoutProgram.programName stringByAppendingString:@" D"];
+     }
      
-     cell.textLabel.text = self.workoutProgram.programName;
+     cell.textLabel.textAlignment = NSTextAlignmentCenter;
  return cell;
  
  }
 
 
-
-
-
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
- /*
- [self.player stop];
- NSURL* url = [[NSBundle mainBundle] URLForResource:[self.songs objectAtIndex:indexPath.row] withExtension:@"mp3"];
- NSError* error = nil;
- self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
- [self.player setDelegate:self];
- 
- [self.player prepareToPlay];
- self.currentSongNumber = indexPath.row;
- 
- self.slider.value = 0.0;
- self.slider.maximumValue = [self.player duration];
- 
- [self.player play];
- */
+
  }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"StrongLiftsA"])
+    {
+        //if ([segue.destinationViewController isKindOfClass:[SettingsViewController class]]) {
+          //  SettingsViewController *settingsVC = (SettingsViewController *)segue.destinationViewController;
+            //settingsVC.user = self.user;
+        //}
+    }
+}
 
 
 @end
