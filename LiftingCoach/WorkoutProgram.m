@@ -29,8 +29,8 @@
         if ([name isEqualToString:strongLifts]) {
             Workout *a = [[Workout alloc]initStrongLiftA];
             Workout *b = [[Workout alloc]initStrongLiftB];
-            Workout *c = [[Workout alloc]initStrongLiftC];
-            _workouts = [NSMutableArray arrayWithObjects:a, b, c, nil];
+            //Workout *c = [[Workout alloc]initStrongLiftC];
+            _workouts = [NSMutableArray arrayWithObjects:a, b, nil];
         }
         else if ([name isEqualToString:wendlers]) {
             Workout *a = [[Workout alloc]initWendlersA];

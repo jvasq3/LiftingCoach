@@ -12,6 +12,7 @@
  #import "Workout.h"
  #import "Exercise.h"
  #import "WorkoutViewController.h"
+ #import "User.h"
  @implementation WorkoutProgramViewController
  
  - (WorkoutProgram *)workoutProgram
@@ -29,10 +30,20 @@
     }
     return _workout;
 }
+
+-(User*) user
+{
+    if(!_user)
+    {
+        _user = [[User alloc] init];
+    }
+    return _user;
+}
  
  - (void)viewDidLoad {
+     [super viewDidLoad];
      self.navigationItem.title = self.workoutProgram.programName;
-     [self.tableView setContentInset:UIEdgeInsetsMake(100, 0, 0, 0)];
+     //[self.tableView setContentInset:UIEdgeInsetsMake(100, 0, 0, 0)];
  }
  
 
@@ -101,6 +112,8 @@
         if ([segue.destinationViewController isKindOfClass:[WorkoutViewController class]]) {
             WorkoutViewController *vc = (WorkoutViewController *)segue.destinationViewController;
             vc.workout = self.workout;
+            vc.workoutProgram = self.workoutProgram;
+            vc.user = self.user;
             
         }
     }

@@ -43,8 +43,11 @@ static NSString *barbellRow = @"Barbell Row";
 // variables for accessory exercise names for wendler's
 static NSString *chinup = @"Chin up";
 static NSString *legCurl = @"Leg Curl";
+static NSString *calfRaise = @"Calf Raise";
 static NSString *dumbbellRow = @"Dumbbell Row";
 static NSString *hangingLegRaise = @"Hanging Leg Raise";
+static NSString *inclineDumbbell = @"incline Dumbbell Press";
+static NSString *dumbbellShoulderFlys = @"Dumbbell Shoulder Flys";
 
 // variables for accessory names for stronglifts and madcows
 static NSString *weightedSitup = @"Weighted Sit-Up";
@@ -54,6 +57,7 @@ static NSString *tricepExtension = @"Tricep Extensions";
 
 // variables for number of target sets to complete
 static NSInteger oneSet = 1;
+static NSInteger twoSets = 2;
 static NSInteger threeSets = 3;
 static NSInteger fiveSets = 5;
 

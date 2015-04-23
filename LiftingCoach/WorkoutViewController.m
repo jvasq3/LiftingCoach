@@ -10,7 +10,14 @@
 #import "Workout.h"
 #import "Exercise.h"
 #import "WorkoutProgramViewController.h"
+#import "WorkoutProgram.h"
+#import "User.h"
+
 @implementation WorkoutViewController
+
+
+
+
 
 - (Workout *)workout
 {
@@ -20,7 +27,40 @@
     return _workout;
 }
 
+- (WorkoutProgram *)workoutProgram
+{
+    if (!_workoutProgram) {
+        _workoutProgram = [[WorkoutProgram alloc] init];
+    }
+    return _workoutProgram;
+}
+
+-(User*) user
+{
+    if(!_user)
+    {
+        _user = [[User alloc] init];
+    }
+    return _user;
+}
+
 - (void)viewDidLoad {
+    [super viewDidLoad];
+    NSMutableString *name = [self.workoutProgram.programName mutableCopy];
+    NSMutableString *day = [self.workout.day mutableCopy];
+    NSString *titleName = [name stringByAppendingString:day];
+    self.navigationItem.title = titleName;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger maxSquat = [defaults integerForKey:@"maxSquat"];
+    NSInteger maxBench = [defaults integerForKey:@"maxBench"];
+    NSInteger maxDeadlift = [defaults integerForKey:@"maxDeadlift"];
+    NSInteger maxOverhead = [defaults integerForKey:@"maxOverhead"];
+    
+    self.user.maxSquat = maxSquat;
+    self.user.maxBench = maxBench;
+    self.user.maxDeadlift = maxDeadlift;
+    self.user.maxOverhead = maxOverhead;
     
 }
 
@@ -45,7 +85,14 @@
     Exercise *exercise = [self.workout.exercises objectAtIndex:indexPath.row];
     NSString *exerciseName = exercise.name;
     
+    // get sets and reps for each exercise to display
+    NSString *sets = [NSString stringWithFormat:@"%ld", (long)exercise.targetSets];
+    NSString *reps = [NSString stringWithFormat:@"%ld", (long)exercise.targetReps];
+    NSArray *joinStrings = [NSArray arrayWithObjects:sets, reps, nil];
+    NSString *jointStrings = [joinStrings componentsJoinedByString:@" x "];
+    
     cell.textLabel.text = exerciseName;
+    cell.detailTextLabel.text = jointStrings;
     
     return cell;
     

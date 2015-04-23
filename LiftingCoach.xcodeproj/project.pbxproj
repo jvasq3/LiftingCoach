@@ -13,6 +13,7 @@
 		27250B581AE22F6E00846E06 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B571AE22F6E00846E06 /* Set.m */; };
 		2750EB331AE874A500BDCB90 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2750EB311AE874A500BDCB90 /* SettingsViewController.m */; };
 		2750EB361AE885A300BDCB90 /* WorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2750EB351AE885A300BDCB90 /* WorkoutViewController.m */; };
+		2770106B1AE8E16900369F01 /* ExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2770106A1AE8E16900369F01 /* ExerciseViewController.m */; };
 		279656311AE5E61D008348FC /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B411AE2050200846E06 /* User.m */; };
 		279656321AE5E623008348FC /* WorkoutProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 27250B541AE229D200846E06 /* WorkoutProgram.m */; };
 		3C092AEF1AE1B957004A4324 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AEE1AE1B957004A4324 /* main.m */; };
@@ -52,6 +53,8 @@
 		2750EB321AE874A500BDCB90 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		2750EB341AE885A300BDCB90 /* WorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutViewController.h; sourceTree = "<group>"; };
 		2750EB351AE885A300BDCB90 /* WorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutViewController.m; sourceTree = "<group>"; };
+		277010691AE8E16900369F01 /* ExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseViewController.h; sourceTree = "<group>"; };
+		2770106A1AE8E16900369F01 /* ExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseViewController.m; sourceTree = "<group>"; };
 		3C092AE91AE1B957004A4324 /* LiftingCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftingCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C092AED1AE1B957004A4324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C092AEE1AE1B957004A4324 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				2723BF941AE8679900A44499 /* WorkoutProgramViewController.m */,
 				3C092AF61AE1B958004A4324 /* Main.storyboard */,
 				3C092AF91AE1B958004A4324 /* Images.xcassets */,
+				277010691AE8E16900369F01 /* ExerciseViewController.h */,
+				2770106A1AE8E16900369F01 /* ExerciseViewController.m */,
 				3C092AFB1AE1B958004A4324 /* LaunchScreen.xib */,
 				3C092AEC1AE1B957004A4324 /* Supporting Files */,
 				27250B431AE2051F00846E06 /* Model */,
@@ -272,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2770106B1AE8E16900369F01 /* ExerciseViewController.m in Sources */,
 				279656321AE5E623008348FC /* WorkoutProgram.m in Sources */,
 				2723BF951AE8679900A44499 /* WorkoutProgramViewController.m in Sources */,
 				2750EB331AE874A500BDCB90 /* SettingsViewController.m in Sources */,

@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "WorkoutProgram.h"
 #import "Workout.h"
+#import "User.h"
 
 @interface WorkoutProgramViewController : UITableViewController
 
 @property (strong, nonatomic) WorkoutProgram *workoutProgram;
 @property (strong, nonatomic) Workout *workout;
+@property (strong, nonatomic) User *user;
+
 @end
+

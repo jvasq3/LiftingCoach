@@ -11,7 +11,6 @@
 
 @interface User : NSObject
 
-@property (strong, nonatomic) NSString *username;
 @property (nonatomic, readwrite) NSInteger maxSquat;
 @property (nonatomic, readwrite) NSInteger maxBench;
 @property (nonatomic, readwrite) NSInteger maxDeadlift;

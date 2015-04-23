@@ -42,6 +42,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.title = @"Lifting Coach";
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
 
 }
 
@@ -90,6 +93,7 @@
         WorkoutProgramViewController *vc = (WorkoutProgramViewController *)segue.destinationViewController;
         
         vc.workoutProgram = self.workoutProgram;
+        vc.user = self.user;
     }
     
 }

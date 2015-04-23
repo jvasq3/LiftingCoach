@@ -45,6 +45,18 @@
     self.deadliftMax.tag = 2;
     self.oPressMax.tag = 3;
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger maxSquat = [defaults integerForKey:@"maxSquat"];
+    NSInteger maxBench = [defaults integerForKey:@"maxBench"];
+    NSInteger maxDeadlift = [defaults integerForKey:@"maxDeadlift"];
+    NSInteger maxOverhead = [defaults integerForKey:@"maxOverhead"];
+    
+    self.user.maxSquat = maxSquat;
+    self.user.maxBench = maxBench;
+    self.user.maxDeadlift = maxDeadlift;
+    self.user.maxOverhead = maxOverhead;
+    
+    
     if(self.user.maxBench)
     {
         self.benchMax.text = [NSString stringWithFormat: @"%ld", self.user.maxBench];
@@ -75,26 +87,43 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+    // create NSUserDefaults for values to be saved over launches
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
     if(textField.tag == 0)
     {
             self.user.maxSquat = [self.squatMax.text intValue];
             NSLog(@"Max Squat: %ld", self.user.maxSquat);
+        
+        
+        
+        [defaults setInteger:self.user.maxSquat forKey:@"maxSquat"];
+        [defaults synchronize];
     
     }
     else if(textField.tag == 1)
     {
             self.user.maxBench = [self.benchMax.text intValue];
             NSLog(@"Max Bench: %ld", self.user.maxBench);
+        
+        [defaults setInteger:self.user.maxBench forKey:@"maxBench"];
+        [defaults synchronize];
     }
     else if(textField.tag == 2)
     {
         self.user.maxDeadlift = [self.deadliftMax.text intValue];
         NSLog(@"Max Deadlift: %ld", self.user.maxDeadlift);
+        
+        [defaults setInteger:self.user.maxDeadlift forKey:@"maxDeadlift"];
+        [defaults synchronize];
     }
     else if(textField.tag == 3)
     {
         self.user.maxOverhead = [self.oPressMax.text intValue];
         NSLog(@"Max Overhead: %ld", self.user.maxOverhead);
+        
+        [defaults setInteger:self.user.maxOverhead forKey:@"maxOverhead"];
+        [defaults synchronize];
     }
     NSLog(@"%@",textField.text);
 }

@@ -21,5 +21,5 @@
 
 // variables for names of the workout routines
 static NSString *strongLifts = @"StrongLifts";
-static NSString *wendlers = @"Wendler's 5/3/1";
-static NSString *madCow = @"Madcow 5x5";
+static NSString *wendlers = @"Wendler's";
+static NSString *madCow = @"Madcow";

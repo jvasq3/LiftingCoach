@@ -20,7 +20,7 @@
 // stronglifts workout constructors
 - (id)initStrongLiftA;
 - (id)initStrongLiftB;
-- (id)initStrongLiftC;
+//- (id)initStrongLiftC;
 
 // wendlers workout constructors
 - (id)initWendlersA;
