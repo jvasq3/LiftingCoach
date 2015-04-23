@@ -31,7 +31,8 @@
 }
  
  - (void)viewDidLoad {
- 
+     self.navigationItem.title = self.workoutProgram.programName;
+     [self.tableView setContentInset:UIEdgeInsetsMake(100, 0, 0, 0)];
  }
  
 
