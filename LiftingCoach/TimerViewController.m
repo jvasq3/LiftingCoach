@@ -102,6 +102,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.tabBarController setTitle:@"Timer"];
+    
     _times = @[@"0", @"1", @"2", @"3", @"4"];
     self.isPaused = NO;
     self.ticks = 0;

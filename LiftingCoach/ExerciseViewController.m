@@ -8,6 +8,21 @@
 
 #import "ExerciseViewController.h"
 
+
+
 @implementation ExerciseViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // set the navbar title
+    [self.tabBarController setTitle:self.exercise.name];
+    
+    
+    
+}
+
+
+
 
 @end

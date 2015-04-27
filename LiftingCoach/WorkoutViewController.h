@@ -10,10 +10,12 @@
 #import "Workout.h"
 #import "WorkoutProgram.h"
 #import "User.h"
+#import "Exercise.h"
 @interface WorkoutViewController : UITableViewController
 
 @property (strong, nonatomic) Workout *workout;
 @property (strong, nonatomic) WorkoutProgram *workoutProgram;
 @property (strong, nonatomic) User *user;
+@property (strong, nonatomic) Exercise *exercise;
 
 @end

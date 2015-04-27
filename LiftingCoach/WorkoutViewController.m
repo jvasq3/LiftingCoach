@@ -12,12 +12,9 @@
 #import "WorkoutProgramViewController.h"
 #import "WorkoutProgram.h"
 #import "User.h"
+#import "ExerciseViewController.h"
 
 @implementation WorkoutViewController
-
-
-
-
 
 - (Workout *)workout
 {
@@ -25,6 +22,14 @@
         _workout = [[Workout alloc] init];
     }
     return _workout;
+}
+
+- (Exercise *)exercise
+{
+    if (!_exercise) {
+        _exercise = [[Exercise alloc] init];
+    }
+    return _exercise;
 }
 
 - (WorkoutProgram *)workoutProgram
@@ -83,6 +88,7 @@
     }
     
     Exercise *exercise = [self.workout.exercises objectAtIndex:indexPath.row];
+    
     NSString *exerciseName = exercise.name;
     
     // get sets and reps for each exercise to display
@@ -98,12 +104,33 @@
     
 }
 
-
+/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
+ */
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    self.exercise = [self.workout.exercises objectAtIndex:indexPath.row];
+    
+    if([segue.identifier isEqualToString:@"ToExercise"])
+    {
+            UITabBarController *tabar=segue.destinationViewController;
+            ExerciseViewController *vc=[tabar.viewControllers objectAtIndex:0];
+            vc.exercise = self.exercise;
+        
+            //vc.workoutProgram = self.workoutProgram;
+            //vc.user = self.user;
+            
+        
+    }
+    
+    
+    
+    
+    
     
 }
 

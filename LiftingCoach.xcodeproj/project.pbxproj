@@ -130,6 +130,8 @@
 			children = (
 				3C092AF01AE1B957004A4324 /* AppDelegate.h */,
 				3C092AF11AE1B958004A4324 /* AppDelegate.m */,
+				277010691AE8E16900369F01 /* ExerciseViewController.h */,
+				2770106A1AE8E16900369F01 /* ExerciseViewController.m */,
 				3C092AF31AE1B958004A4324 /* MainScreenViewController.h */,
 				3C092AF41AE1B958004A4324 /* MainScreenViewController.m */,
 				3C092B181AE1DD8B004A4324 /* TimerViewController.h */,
@@ -142,8 +144,6 @@
 				2723BF941AE8679900A44499 /* WorkoutProgramViewController.m */,
 				3C092AF61AE1B958004A4324 /* Main.storyboard */,
 				3C092AF91AE1B958004A4324 /* Images.xcassets */,
-				277010691AE8E16900369F01 /* ExerciseViewController.h */,
-				2770106A1AE8E16900369F01 /* ExerciseViewController.m */,
 				3C092AFB1AE1B958004A4324 /* LaunchScreen.xib */,
 				3C092AEC1AE1B957004A4324 /* Supporting Files */,
 				27250B431AE2051F00846E06 /* Model */,

@@ -13,4 +13,6 @@
 @property (nonatomic, readwrite) NSInteger weight;
 @property (nonatomic, readwrite) NSInteger reps;
 
+
+
 @end

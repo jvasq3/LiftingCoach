@@ -36,6 +36,8 @@
     _deadliftMax.delegate = self;
     _oPressMax.delegate = self;
     
+    self.navigationItem.title = @"Settings";
+    
     self.squatMax.keyboardType = UIKeyboardTypeNumberPad;
     self.benchMax.keyboardType = UIKeyboardTypeNumberPad;
     self.deadliftMax.keyboardType = UIKeyboardTypeNumberPad;
