@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Exercise.h"
+#import "User.h"
 @interface ExerciseViewController : UIViewController
 
 @property (strong, nonatomic) Exercise *exercise;
 @property (nonatomic, strong)  NSMutableArray *sets;
-@property (nonatomic, strong) NSMutableArray *textFields;
-@property (nonatomic, strong) NSMutableArray *labels;
+@property (nonatomic, strong) NSMutableArray *reps;
+@property (nonatomic, strong) NSMutableArray *weights;
+@property (nonatomic, strong) User *user;
 @end

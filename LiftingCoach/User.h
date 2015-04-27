@@ -15,5 +15,6 @@
 @property (nonatomic, readwrite) NSInteger maxBench;
 @property (nonatomic, readwrite) NSInteger maxDeadlift;
 @property (nonatomic, readwrite) NSInteger maxOverhead;
+//@property (nonatomic, strong) NSMutableArray *listOfWorkouts;
 
 @end

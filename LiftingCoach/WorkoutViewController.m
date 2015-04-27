@@ -122,7 +122,7 @@
             vc.exercise = self.exercise;
         
             //vc.workoutProgram = self.workoutProgram;
-            //vc.user = self.user;
+            vc.user = self.user;
             
         
     }
