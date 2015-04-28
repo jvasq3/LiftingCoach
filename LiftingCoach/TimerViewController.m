@@ -35,12 +35,6 @@
         
 
     }
-    else if(!self.isPaused)
-    {
-        //self.isPaused = NO;
-       self.countdownTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector: @selector(handleTimerTick) userInfo: nil repeats: YES];
-        
-    }
     
     
 }
@@ -68,6 +62,7 @@
         if (self.ticks <= 0)
         {
             [self clearTimer];
+            self.isPaused = YES;
         }
         else
         {
@@ -106,7 +101,7 @@
     [self.tabBarController setTitle:@"Timer"];
     
     _times = @[@"0", @"1", @"2", @"3", @"4"];
-    self.isPaused = NO;
+    self.isPaused = YES;
     self.ticks = 0;
     self.secs = 0;
     self.mins = 0;
@@ -173,6 +168,7 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     [self clearTimer];
+    self.isPaused = YES;
     
     // This method is triggered whenever the user makes a change to the picker selection.
     // The parameter named row and component represents what was selected.
