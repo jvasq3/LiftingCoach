@@ -63,14 +63,14 @@
 
 -(NSMutableArray *)reps {
     if (!_reps) {
-        _reps = [[NSMutableArray alloc]init];
+        _reps = [[NSMutableArray alloc]initWithCapacity:5];
     }
     return _reps;
 }
 
 -(NSMutableArray *)weights {
     if (!_weights) {
-        _weights = [[NSMutableArray alloc]init];
+        _weights = [[NSMutableArray alloc]initWithCapacity:5];
     }
     return _weights;
 }
@@ -119,7 +119,9 @@
     self.reps4.tag = 8;
     self.reps5.tag = 9;
     
-    }
+    self.weights = [NSMutableArray arrayWithObjects:@5, @5, @5, @5, @5, nil];
+    self.reps = [NSMutableArray arrayWithObjects:@5, @5, @5, @5, @5, nil];
+}
 
 //#pragma - mark TextField Delegate Methods
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -132,53 +134,115 @@
     if (textField.tag == 0) {
         NSInteger weightValue = [self.weight1.text intValue];
         NSNumber *val = [NSNumber numberWithInteger:weightValue];
-        [self.weights addObject:val];
+        if ([self.weights objectAtIndex:0]) {
+            [self.weights replaceObjectAtIndex:0 withObject:val];
+            
+        }
+        else {
+            [self.weights insertObject:val atIndex:0];
+        }
+        
         
     }
     else if (textField.tag == 1) {
         NSInteger weightValue = [self.weight2.text intValue];
         NSNumber *val = [NSNumber numberWithInteger:weightValue];
-        [self.weights addObject:val];
+        if ([self.weights objectAtIndex:1]) {
+            [self.weights replaceObjectAtIndex:1 withObject:val];
+            
+        }
+        else {
+            [self.weights insertObject:val atIndex:1];
+        }
     }
     else if (textField.tag == 2) {
         NSInteger weightValue = [self.weight3.text intValue];
         NSNumber *val = [NSNumber numberWithInteger:weightValue];
-        [self.weights addObject:val];
+        if ([self.weights objectAtIndex:2]) {
+            [self.weights replaceObjectAtIndex:2 withObject:val];
+            
+        }
+        else {
+            [self.weights insertObject:val atIndex:2];
+        }
     }
     else if (textField.tag == 3) {
         NSInteger weightValue = [self.weight4.text intValue];
         NSNumber *val = [NSNumber numberWithInteger:weightValue];
-        [self.weights addObject:val];
+        if ([self.weights objectAtIndex:3]) {
+            [self.weights replaceObjectAtIndex:3 withObject:val];
+            
+        }
+        else {
+            [self.weights insertObject:val atIndex:3];
+        }
     }
     else if (textField.tag == 4) {
         NSInteger weightValue = [self.weight5.text intValue];
         NSNumber *val = [NSNumber numberWithInteger:weightValue];
-        [self.weights addObject:val];
+        if ([self.weights objectAtIndex:4]) {
+            [self.weights replaceObjectAtIndex:4 withObject:val];
+            
+        }
+        else {
+            [self.weights insertObject:val atIndex:4];
+        }
     }
     else if (textField.tag == 5) {
         NSInteger repValue = [self.reps1.text intValue];
         NSNumber *val = [NSNumber numberWithInteger:repValue];
-        [self.reps addObject:val];
+        
+        if ([self.reps objectAtIndex:0]) {
+            [self.reps replaceObjectAtIndex:0 withObject:val];
+            
+        }
+        else {
+            [self.reps insertObject:val atIndex:0];
+        }
     }
     else if (textField.tag == 6) {
         NSInteger repValue = [self.reps2.text intValue];
         NSNumber *val = [NSNumber numberWithInteger:repValue];
-        [self.reps addObject:val];
+        if ([self.reps objectAtIndex:1]) {
+            [self.reps replaceObjectAtIndex:1 withObject:val];
+            
+        }
+        else {
+            [self.reps insertObject:val atIndex:1];
+        }
     }
     else if (textField.tag == 7) {
         NSInteger repValue = [self.reps3.text intValue];
         NSNumber *val = [NSNumber numberWithInteger:repValue];
-        [self.reps addObject:val];
+        if ([self.reps objectAtIndex:2]) {
+            [self.reps replaceObjectAtIndex:2 withObject:val];
+            
+        }
+        else {
+            [self.reps insertObject:val atIndex:2];
+        }
     }
     else if (textField.tag == 8) {
         NSInteger repValue = [self.reps4.text intValue];
         NSNumber *val = [NSNumber numberWithInteger:repValue];
-        [self.reps addObject:val];
+        if ([self.reps objectAtIndex:3]) {
+            [self.reps replaceObjectAtIndex:3 withObject:val];
+            
+        }
+        else {
+            [self.reps insertObject:val atIndex:3];
+        }
     }
     else if (textField.tag == 9) {
         NSInteger repValue = [self.reps5.text intValue];
         NSNumber *val = [NSNumber numberWithInteger:repValue];
-        [self.reps addObject:val];
+        if ([self.reps objectAtIndex:4]) {
+            [self.reps replaceObjectAtIndex:4 withObject:val];
+            
+        }
+        else {
+            [self.reps insertObject:val atIndex:4];
+        }
     }
 }
 

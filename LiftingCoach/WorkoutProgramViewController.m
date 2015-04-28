@@ -44,6 +44,7 @@
      [super viewDidLoad];
      self.navigationItem.title = self.workoutProgram.programName;
      //[self.tableView setContentInset:UIEdgeInsetsMake(100, 0, 0, 0)];
+     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
  }
  
 
@@ -83,6 +84,8 @@
      
      exerciseNames = [namesCopy componentsJoinedByString:@", "];
      cell.detailTextLabel.text = exerciseNames;
+     
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"cell-background.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ];
      
  return cell;
  

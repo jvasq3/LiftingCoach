@@ -67,6 +67,8 @@
     self.user.maxDeadlift = maxDeadlift;
     self.user.maxOverhead = maxOverhead;
     
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
 }
 
 
@@ -99,6 +101,8 @@
     
     cell.textLabel.text = exerciseName;
     cell.detailTextLabel.text = jointStrings;
+    
+     cell.backgroundView = [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"cell-background.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ];
     
     return cell;
     
