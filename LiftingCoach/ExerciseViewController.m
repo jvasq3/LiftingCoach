@@ -119,10 +119,7 @@
     self.reps4.tag = 8;
     self.reps5.tag = 9;
     
-    
-    
-    
-}
+    }
 
 //#pragma - mark TextField Delegate Methods
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -185,19 +182,34 @@
     }
 }
 
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    
     [textField resignFirstResponder];
     return YES;
     
 }
 
 
-// Return you to home screen and save workout info
-- (IBAction)completeWorkout:(id)sender {
-    
+- (IBAction)completeExercise:(id)sender {
     
 }
+
+
+- (IBAction)tapToDismiss:(id)sender {
+    [self.weight1 resignFirstResponder];
+    [self.weight2 resignFirstResponder];
+    [self.weight3 resignFirstResponder];
+    [self.weight4 resignFirstResponder];
+    [self.weight5 resignFirstResponder];
+    [self.reps1 resignFirstResponder];
+    [self.reps2 resignFirstResponder];
+    [self.reps3 resignFirstResponder];
+    [self.reps4 resignFirstResponder];
+    [self.reps5 resignFirstResponder];
+}
+
 
 
 

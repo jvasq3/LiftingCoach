@@ -137,5 +137,15 @@
     
 }
 
+- (IBAction)tapToDismiss:(id)sender {
+    [self.squatMax resignFirstResponder];
+    [self.benchMax resignFirstResponder];
+    [self.deadliftMax resignFirstResponder];
+    [self.oPressMax resignFirstResponder];
+}
+
+
+
+
 @end
 
